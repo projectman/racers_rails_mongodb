@@ -168,6 +168,7 @@ feature "Module 1 Summative - CRUD Model Tests" do
         it "update method updates object with supplied hash and overwrites other parameters" do 
             old_racer = @racer
             @racer.update(first_name:"thing", last_name:"one", group:"15 to 19", number: old_racer.number, secs: old_racer.secs)
+
             expect(@racer.first_name).to eq "thing"
             expect(@racer.last_name).to eq "one"
             expect(@racer.group).to eq "15 to 19"
